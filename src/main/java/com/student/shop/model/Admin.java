@@ -17,13 +17,13 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Entity
-@Table(name = "t_admin")
+@Table(name = "tbl_admin")
 public class Admin extends AbstractEntity {
 
 	@Column(columnDefinition="VARCHAR(16) NOT NULL COMMENT '用户名'")
-	private String username;//账户名
+	private String username;//user name
 
 	@Column(columnDefinition="VARCHAR(32) NOT NULL COMMENT '密码'")
-	private String password;//密码
+	private String password;//password
 
 }
