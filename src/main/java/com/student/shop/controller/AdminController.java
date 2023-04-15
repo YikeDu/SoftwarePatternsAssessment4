@@ -20,7 +20,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Date;
 
 /**
- * @author student
+ * @author Yike Du
  * @date 2023-3-8
  */
 @Controller

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>订单记录</title>
+
+    <div th:replace="common_cssjs"></div>
+    <script th:src="@{/js/order.js}" type="text/javascript"></script>
+</head>
+
+<body>
+<div th:replace="common/header::nav"></div>
+<div class="container">
+    <div th:replace="common/adminNav::user"></div>
+    <div class="row">
+        <table class="table table-responsive table-striped">
+                <thead>
+                <tr>
+                    <td>Order Date</td>
+                    <td>Order SN</td>
+                    <td>Order Amount</td>
+                    <td>Order Status</td>
+                    <td>Consignee</td>
+                    <td>Operation</td>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="order : ${page.result}" th:pid="${order.id}" th:switch="${order.status}">
+                        <td th:text="${order.createTime}"></td>
+                        <td th:text="${order.orderNumber}"></td>
+                        <td th:text="${order.finalPrice}"></td>
+                        <td>
+                            <span th:case="'0'">Wait for pay</span>
+                            <span th:case="'1'">Wait for ship</span>
+                            <span th:case="'2'">Already shipped</span>
+                            <span th:case="'3'">Already Cancelled</span>
+                            <span th:case="'4'">Completed</span>
+                        </td>
+                        <td th:text="${order.consignee}"></td>
+                        <td th:switch="${order.status}">
+                            <a class="btn btn-info btn-xs" th:href="@{'/admin/order/view/'+${order.id}}">Details</a>
+                            <span th:case="'0'">  <a class="btn btn-info btn-xs pay-order-btn">Pay</a> <a class="btn btn-info btn-xs cancel-order-btn">取消订单</a></span>
+                            <span th:case="'1'"> <a class="btn btn-info btn-xs cancel-order-btn">Cancel order</a></span>
+                            <span th:case="'2'"> <a class="btn btn-info btn-xs confirm-order-btn">Confirm receipt</a></span>
+                        </td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+<!--    <div class="text-center">-->
+<!--        <tags:pagination page="${page}" paginationSize="${page.pageSize}"/>-->
+<!--    </div>-->
+</div>
+<!-- /container -->
+<div th:replace="common/footer::copy"></div>
+</body>
+</html>

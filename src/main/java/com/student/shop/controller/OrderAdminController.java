@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
- * @author student
+ * @author Yike Du
  * @date 2023-3-8
  */
 @Controller

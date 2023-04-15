@@ -8,7 +8,7 @@ import javax.persistence.*;
 /**
  * 商品类型
  * 
- * @author Student
+ * @author Yike Du
  * @email student@test.com
  * @date 2023-3-9
  * 

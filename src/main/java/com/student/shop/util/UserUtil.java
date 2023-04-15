@@ -8,7 +8,7 @@ import javax.servlet.http.HttpSession;
 /**
  * 用户工具类
  * 
- * @author Student
+ * @author Yike Du
  *
  */
 public class UserUtil {

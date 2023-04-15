@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author student
+ * @author Yike Du
  * @date 2023-3-8
  */
 @Controller

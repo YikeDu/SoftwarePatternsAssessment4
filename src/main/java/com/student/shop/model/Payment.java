@@ -11,7 +11,7 @@ import javax.persistence.*;
 /**
  * 支付方式
  * 
- * @author Student
+ * @author Yike Du
  * @email student@test.com
  * @date 2023-3-18
  * 

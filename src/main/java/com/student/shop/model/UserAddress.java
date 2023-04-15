@@ -9,7 +9,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 /**
- * @author student
+ * @author Yike Du
  * @date 2023-3-8
  * 
  */

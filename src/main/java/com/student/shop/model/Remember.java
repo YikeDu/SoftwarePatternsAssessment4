@@ -6,7 +6,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 /**
- * @author student
+ * @author Yike Du
  * @version 2023/3/13
  */
 @Setter

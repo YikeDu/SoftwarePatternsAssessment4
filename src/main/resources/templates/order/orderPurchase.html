@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>订单Confirm</title>
+    <div th:replace="common_cssjs"></div>
+    <link type="text/css" rel="stylesheet" media="screen" th:href="@{/css/product.css}">
+    <script th:src="@{/js/cart.js}" type="text/javascript"></script>
+</head>
+
+<body>
+<div th:replace="common/header::nav"></div>
+<div class="container">
+    <form class="form-horizontal" action="/user/order/ordering" method="post">
+        <div class="row">
+            <div class="col-sm-6 list-group">
+                    <a href="#" th:each="address : ${addressList}" class="list-group-item addressItem">
+                        <h4 class="list-group-item-heading" th:text="${address.address}">重庆</h4>
+                        <p class="list-group-item-text" th:text="${address.consignee}">重庆</p>
+                        <input type="hidden" th:value="${address.id}"/>
+                        <input type="hidden" th:value="${address.zipcode}"/>
+                        <input type="hidden" th:value="${address.phone}"/>
+                    </a>
+            </div>
+            <div class="col-sm-6">
+                <input type="hidden" id="id" name="id"/>
+                <div class="form-group">
+                    <label for="address" class="col-sm-2 control-label">Address</label>
+
+                    <div class="col-sm-6">
+                        <input id="address" class="form-control" type="text" name="address"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="zipcode" class="col-sm-2 control-label">Zip code</label>
+
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="zipcode" name="zipcode"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="col-sm-2 control-label">Phone</label>
+
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="phone" name="phone"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="consignee" class="col-sm-2 control-label">Contacts user</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="consignee" name="consignee"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Model</td>
+                    <td>Code</td>
+                    <td>Price</td>
+                    <td>Number</td>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="ci:${cartItems}" pid="${ci.value.product.id}">
+                        <td th:text="${ci.value.product.title}">Name</td>
+                        <td th:text="${ci.value.product.model}">Model</td>
+                        <td th:text="${ci.value.product.code}">Code</td>
+                        <td th:text="${ci.value.product.point}">Price</td>
+                        <td th:text="${ci.value.total}">Number</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-primary" href="/cart/">Back to Shopping Cart</a>
+            <button class="btn btn-primary" type="submit">Confirm</button>
+
+            <div id="delSuccess" class="alert alert-success" style="display: none;">Delete Success...</div>
+            <div id="delAllSuccess" class="alert alert-success" style="display: none;">Shopping Cart Clear Success...</div>
+        </div>
+    </form>
+</div>
+
+</div>
+<div th:replace="common/footer::copy"></div>
+</body>
+</html>

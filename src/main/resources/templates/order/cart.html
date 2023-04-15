@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Shopping Cart</title>
+
+    <div th:replace="common_cssjs"></div>
+    <link type="text/css" rel="stylesheet" media="screen" th:href="@{/css/index.css}">
+    <script th:src="@{/js/product.js}" type="text/javascript"></script>
+    <script th:src="@{/js/cart.js}" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div th:replace="common/header::nav"></div>
+<div class="container">
+    <div class="row">
+        <div class="text-center" th:if="${session.cart} == null or ${session.cart.isEmpty()}">
+            <tr>
+                <td>Shopping Cart is blank...</td>
+            </tr>
+        </div>
+        <table class="table table-responsive table-striped" th:unless="${session.cart} == null or ${session.cart.isEmpty()}">
+            <thead>
+            <tr>
+                <td>Name</td>
+                <td>Model</td>
+                <td>Code</td>
+                <td>Price</td>
+                <td>Number</td>
+                <td>Operation</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="ci : ${cartItems}" th:pid="${ci.value.product.id}">
+                <td th:text="${ci.value.product.title}">Product Name</td>
+                <td th:text="${ci.value.product.model}">Model</td>
+                <td th:text="${ci.value.product.code}">Code</td>
+                <td th:text="${ci.value.product.point}">Price</td>
+                <td><a class="btn btn-default btn-xs delTotal">-</a> <label
+                        th:productid="${ci.value.product.id}" th:text="${ci.value.total}">100</label> <a
+                        class="btn btn-default btn-xs addTotal">+</a></td>
+                <td><a class="btn btn-info delBtn btn-xs" th:productid="@{${ci.value.product.id}}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <div id="delSuccess" class="alert alert-success" style="display: none;">Delete Success...</div>
+        <div id="delAllSuccess" class="alert alert-success" style="display: none;">Shopping Cart Clear Success....</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-9">
+            <a class="btn btn-info" th:href="@{'/'}">Continue to Buy</a>
+            <a class="btn btn-info" id="cleanCart"> ClearShopping Cart</a>
+        </div>
+        <div class="col-md-6 col-xs-3 text-right">
+            <a class="btn btn-primary" th:href="@{'/user/order/purchase/'}" href="/user/order/purchase/">Pay</a>
+        </div>
+    </div>
+</div>
+
+</div>
+<!-- /container -->
+<div th:replace="common/footer::copy"></div>
+</body>
+</html>

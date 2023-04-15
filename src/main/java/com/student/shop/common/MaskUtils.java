@@ -2,10 +2,7 @@ package com.student.shop.common;
 
 import java.util.Arrays;
 
-/**
- * @author student
- * @version 2023/3/15
- */
+
 public class MaskUtils {
 
     public static final char SEPARATOR_CHAR_ASTERISK = '*';

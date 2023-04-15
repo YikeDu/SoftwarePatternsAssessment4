@@ -11,28 +11,8 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * EasyImage lets you do all the basic image operations -
- * converting, cropping, resizing, rotating, flipping…
- * Plus it let’s you do some really cool affects.
- * All is done super easily.
- * Combining operations can produce some very cool results.
- * <p/>
- * Operations:
- * Open image.
- * Save image
- * Convert image
- * Re-size image
- * Crop image
- * Convert to black and white image
- * Rotate image
- * Flip image
- * Add color to image
- * Create image with multiple instance of the original
- * Combining 2 images together
- * Emphasize parts of the image
- * Affine transform image
  *
- * @author student
+ * @author Yike Du
  * @version 2023/3/31
  */
 public class Image {

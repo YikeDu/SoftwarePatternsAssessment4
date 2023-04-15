@@ -7,7 +7,7 @@ import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.*;
 
 /**
- * @author student
+ * @author Yike Du
  * @version 2023/3/31
  */
 @Setter

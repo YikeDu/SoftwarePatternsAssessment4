@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- * @author Student
+ * @author Yike Du
  * @version 2023/3/14
  */
 public class Page<T> {

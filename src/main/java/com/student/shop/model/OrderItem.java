@@ -10,7 +10,7 @@ import javax.persistence.*;
 
 /**
  * 订单关联明细
- * @author student
+ * @author Yike Du
  * @date 2023-3-8
  * 
  */

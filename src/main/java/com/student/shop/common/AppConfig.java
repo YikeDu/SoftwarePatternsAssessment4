@@ -6,8 +6,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 全局配置类
- * @author student
- * @version 2023-3-31
  */
 @Component
 public class AppConfig {

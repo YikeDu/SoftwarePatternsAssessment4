@@ -1,7 +1,7 @@
 package com.student.shop.common;
 
 /**
- * @author student
+ * @author Yike Du
  * @version 2023/3/15
  */
 public enum Status {

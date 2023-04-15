@@ -21,47 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * 转换对象为字符串.
- * <p/>
- * 不输出的请在getter或者field上标注{@link ToString.Invisible}
- * <p/>
- * 需要掩码的请在getter或者field上标注{@link ToString.Maskable}
- * <p/>
- * java.util.Date会按照"yyyy-MM-dd HH:mm:ss"格式输出
- * <p/>
- * 数组(50)/集合(50)/Map(50)/String(100)超过一定的限制(括号内数字),多余的元素会输出为...
- * <p/>
- * 集合/Map已检查循环引用问题.能确保原来toString不出问题,此方法也不会出问题.
- * <p/>
- * mask长度超过100时,会先截断在mask.
- * <p/>
- * StringBuilder会初始化大小
- * <p/>
- * <p>
- * <h3>Usage Examples</h3>
- * 修改javabean的toString方法为:
- * <p>
- * <pre class="code">
- * {@code
- * @Override
- * public String toString() {
- *  return ToString.toString(this);
- * }
- * }
- * </pre>
- * <p>
- * 使用时请确保classpath中有javassist:
- * <p>
- * <pre class="code">
- * {@code
- * <dependency>
- * <groupId>org.javassist</groupId>
- * <artifactId>javassist</artifactId>
- * </dependency>
- * }
- * </pre>
- *
- * @author student
+ * @author Yike Du
  * @version 2023/3/15
  */
 public class ToString {

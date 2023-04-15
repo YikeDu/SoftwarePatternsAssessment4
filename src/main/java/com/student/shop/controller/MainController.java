@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * @author student
+ * @author Yike Du
  * @date 2023-3-8
  */
 @Slf4j

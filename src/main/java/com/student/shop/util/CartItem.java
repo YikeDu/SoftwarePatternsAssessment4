@@ -4,7 +4,7 @@ import com.student.shop.model.Product;
 
 /**
  * 购物车关联项
- * @author Student
+ * @author Yike Du
  * @version 2023/3/16
  */
 public class CartItem {

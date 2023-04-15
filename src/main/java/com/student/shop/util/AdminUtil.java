@@ -8,7 +8,7 @@ import javax.servlet.http.HttpSession;
 /**
  * 管理员工具类
  * 
- * @author Student
+ * @author Yike Du
  *
  */
 public class AdminUtil {

@@ -6,8 +6,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * User DAO
- * @author Student
- * @email student@test.com
+ * @author Yike Du
  * @date 2023-3-9
  * 
  */

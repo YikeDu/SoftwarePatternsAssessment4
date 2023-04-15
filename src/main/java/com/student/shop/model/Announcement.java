@@ -11,7 +11,7 @@ import javax.persistence.*;
 /**
  * 公告
  *
- * @author Student
+ * @author Yike Du
  * @email student@test.com
  * @date 2023-3-18
  */

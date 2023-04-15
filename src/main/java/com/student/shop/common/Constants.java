@@ -4,9 +4,6 @@
 package com.student.shop.common;
 
 /**
- * @author Student
- * @email student@test.com
- * @date 2023-3-18
  * 
  */
 public class Constants {

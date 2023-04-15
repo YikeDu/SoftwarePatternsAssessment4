@@ -6,8 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @author student
- * @version 2023/3/13
+ * @author Yike Du
  */
 @Service
 public class RememberService {
