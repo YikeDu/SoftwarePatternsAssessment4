@@ -19,7 +19,7 @@ import java.util.List;
 @Getter
 @Entity
 @NoArgsConstructor
-@Table(name = "t_user")
+@Table(name = "tbl_user")
 public class User extends AbstractEntity {
 
 	@Column(columnDefinition="VARCHAR(32) DEFAULT NULL COMMENT '账号(暂时没用)'")

@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Entity
-@Table(name = "t_remember")
+@Table(name = "tbl_remember")
 public class Remember extends AbstractEntity {
 
     @ManyToOne
