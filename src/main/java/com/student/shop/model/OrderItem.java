@@ -9,7 +9,6 @@ import lombok.Setter;
 import javax.persistence.*;
 
 /**
- * 订单关联明细
  * @author Yike Du
  * @date 2023-3-8
  * 
@@ -17,7 +16,7 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Entity
-@Table(name = "t_orderitem")
+@Table(name = "tbl_orderitem")
 public class OrderItem extends AbstractEntity {
 
 	@OneToOne
