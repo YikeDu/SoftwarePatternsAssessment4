@@ -9,7 +9,6 @@ import lombok.Setter;
 import javax.persistence.*;
 
 /**
- * 新闻
  * @author Yike Du
  * @email student@test.com
  * @date 2023-3-18
@@ -18,7 +17,7 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Entity
-@Table(name = "t_news")
+@Table(name = "tbl_news")
 public class News extends AbstractEntity {
 
 	@Column(columnDefinition="VARCHAR(64) NOT NULL COMMENT '标题'")

@@ -11,15 +11,13 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 订单
- *
  * @author Yike Du
  * @date 2023-3-8
  */
 @Setter
 @Getter
 @Entity
-@Table(name = "t_order")
+@Table(name = "tbl_order")
 public class Order extends AbstractEntity {
 
     @Column(columnDefinition="VARCHAR(64) NOT NULL COMMENT '订单编号'")
