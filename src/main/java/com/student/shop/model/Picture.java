@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Getter
 @Entity
 @DynamicUpdate
-@Table(name = "t_picture")
+@Table(name = "tbl_picture")
 public class Picture extends AbstractEntity {
 
     @Column(columnDefinition="VARCHAR(32) NOT NULL COMMENT '图片名称'")

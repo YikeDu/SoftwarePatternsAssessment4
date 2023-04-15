@@ -16,7 +16,7 @@ import java.util.List;
 @Getter
 @Entity
 @DynamicUpdate
-@Table(name = "t_product")
+@Table(name = "tbl_product")
 public class Product extends AbstractEntity {
 
     @Column(columnDefinition="VARCHAR(64) NOT NULL COMMENT 'Product Name'")
