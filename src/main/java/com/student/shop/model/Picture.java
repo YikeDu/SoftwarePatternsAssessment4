@@ -8,7 +8,6 @@ import javax.persistence.*;
 
 /**
  * @author Yike Du
- * @version 2023/3/31
  */
 @Setter
 @Getter

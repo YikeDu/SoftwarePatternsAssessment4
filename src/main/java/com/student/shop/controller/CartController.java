@@ -1,6 +1,8 @@
 package com.student.shop.controller;
 
 import com.google.common.collect.Maps;
+import com.student.shop.model.Item;
+import com.student.shop.model.ShoppingCart;
 import com.student.shop.util.CartItem;
 import com.student.shop.util.CartUtil;
 import com.student.shop.common.web.JsonResult;
@@ -20,10 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 
-/**
- * @author Yike Du
- * @date 2023-3-8
- */
+
 @Controller
 @RequestMapping("/cart")
 public class CartController {
@@ -70,6 +69,22 @@ public class CartController {
     public JsonResult deleteAllFromCart(HttpSession session) {
         CartUtil.cleanCart(session);
         logger.debug("购物车商品清空成功...");
+
+        JsonResult result = new JsonResult();
+        result.setToSuccess();
+        return result;
+    }
+
+    @RequestMapping(value = "/add/{id}/{total}/{total}")
+    @ResponseBody
+    public JsonResult addToCarts(@PathVariable Integer id, @PathVariable Integer total, HttpSession session) {
+        Product product = productService.findById(id);
+        CartUtil.saveProductToCart(session, product, total);
+        logger.debug("Added to shopping cart successfully...");
+
+        // Access the ShoppingCart singleton instance and add the product to it
+        ShoppingCart shoppingCart = ShoppingCart.getInstance();
+        shoppingCart.addItem(new Item(Item.getName(), Item.getPrice(), total));
 
         JsonResult result = new JsonResult();
         result.setToSuccess();
